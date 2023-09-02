@@ -1,3 +1,4 @@
+import Footer from "./components/footer";
 import NavBar from "./components/navbar";
 import "./globals.css";
 import { Viga, Roboto_Condensed } from "next/font/google";
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
       <body className={`${viga.variable} text-dark`}>
         <NavBar />
         {children}
+        <Footer />
       </body>
     </html>
   );

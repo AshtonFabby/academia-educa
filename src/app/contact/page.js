@@ -7,7 +7,7 @@ const ContactPage = () => {
         <div className="content container m-auto pt-[200px] md:pt-[400px] lg:pt-[350px] lg:flex gap-7 justify-between ">
           <div>
             <div className=" md:flex justify-between ">
-              <h1 className=" text-5xl font-viga text-primary w-[500px]">
+              <h1 className=" text-5xl font-viga text-primary md:w-[500px]">
                 Não hesite em contactar-nos
               </h1>
             </div>

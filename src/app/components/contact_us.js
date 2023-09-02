@@ -1,6 +1,6 @@
 const ContactUs = () => {
   return (
-    <div className=" bg-[#DFFFF6] h-[400px]">
+    <div className=" bg-[#DFFFF6] h-[400px] mb-[500px] md:mb-[150px] lg:mb-[300px]">
       <div className="container mx-auto pt-20 md:flex gap-5 lg:gap-10">
         <div className=" md:w-1/2 md:mt-16 mb-20">
           <h1 className=" font-viga text-2xl text-primary ">

@@ -33,19 +33,6 @@ const AboutPage = () => {
               alt="thumbnail"
               className=" rounded-2xl "
             />
-            {/* <div className="play absolute bg-primary p-5 w-[100px] h-[100px] flex items-center justify-center rounded-full">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 52 61"
-              fill="none"
-              className=" w-[50px] h-[50px]"
-            >
-              <path
-                d="M52 30.5L0.249997 60.3779L0.25 0.622121L52 30.5Z"
-                fill="#D9D9D9"
-              />
-            </svg>
-          </div> */}
           </div>
           <div className="mt-10 md:mt-0 md:w-1/2">
             <p className="">
@@ -79,8 +66,8 @@ const AboutPage = () => {
         </p>
       </div>
 
-      <div className=" container mt-28 mx-auto md:flex gap-6">
-        <div className=" flex flex-col gap-5 md:w-1/2 justify-center items-center p-10 border-2 border-primary border-dashed rounded-2xl">
+      <div className=" container mt-28 mx-auto md:flex justify-center gap-6">
+        <div className=" lg:w-5/12 flex flex-col gap-5 md:w-1/2 justify-center items-center p-10 border-2 border-primary border-dashed rounded-2xl">
           <Image src="/svg/visson.svg" width={141} height={141} alt="vision" />
           <h2 className=" font-viga text-2xl">Missão</h2>
           <p className=" text-center">
@@ -89,7 +76,7 @@ const AboutPage = () => {
             para o sucesso sustentável das carreiras e das empresas.
           </p>
         </div>
-        <div className=" flex flex-col gap-5 justify-center items-center p-10 border-2 md:w-1/2 border-primary border-dashed rounded-2xl">
+        <div className=" lg:w-5/12 flex flex-col gap-5 justify-center items-center p-10 border-2 md:w-1/2 border-primary border-dashed rounded-2xl">
           <Image
             src="/svg/mission.svg"
             width={141}
@@ -145,7 +132,7 @@ const AboutPage = () => {
 
       <div className="mt-28 bg-[url('/images/blue-bg.png')]">
         <div className="container mx-auto py-28 text-white">
-          <h1 className=" text-4xl font-viga mb-5 text-center ">
+          <h1 className=" text-4xl font-viga mb-5 text-center">
             Vamas além da capacitação técnica <br /> professional
           </h1>
           <div className=" grid md:grid-cols-3 gap-10 mt-20">

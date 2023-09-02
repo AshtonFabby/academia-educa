@@ -4,7 +4,7 @@ import Link from "next/link";
 const CourseItem = (props) => {
   return (
     <Link
-      href="/courses/category/course"
+      href={`/courses/category/course?course-name=${props.title}`}
       className=" h-max grid justify-between hover:shadow-2xl rounded-2xl "
     >
       <Image
@@ -45,14 +45,14 @@ const CourseItem = (props) => {
               viewBox="0 0 16 16"
               fill="none"
             >
-              <g clip-path="url(#clip0_64_39)">
+              <g clipPath="url(#clip0_64_39)">
                 <path d="M0 0H16V16H0V0Z" fill="white" />
                 <path
                   d="M2.5 8.00008H14M14 8.00008L10.6667 11.3334M14 8.00008L10.6667 4.66675"
                   stroke="black"
-                  stroke-width="1.01781"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="1.01781"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                 />
               </g>
               <defs>

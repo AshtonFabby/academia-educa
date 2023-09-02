@@ -1,12 +1,18 @@
+"use client";
 import ContactUs from "@/app/components/contact_us";
 import CourseItem from "@/app/components/course_item";
 
-const Category = () => {
+import { useSearchParams } from "next/navigation";
+
+const Category = (pageContext) => {
+  const searchParams = useSearchParams();
+  const categoryName = searchParams.get("category-name");
+
   return (
     <main>
       <div className="hero bg-[url('/svg/bg-graphic.svg')] bg-no-repeat  bg-right-top bg-contain md:bg-auto pb-20">
         <div className="content container m-auto pt-[200px] md:pt-[400px] lg:pt-[350px]">
-          <h1 className=" text-5xl font-viga text-primary">Finanças</h1>
+          <h1 className=" text-5xl font-viga text-primary">{categoryName}</h1>
           <p>
             Chegou a hora de investir em si mesmo e preparar-se para o futuro;
             estamos aqui para apoiar o seu crescimento e ajudá-lo a alcançar o

@@ -1,7 +1,12 @@
+"use client";
 import ContactUs from "@/app/components/contact_us";
 import Image from "next/image";
+import { useSearchParams } from "next/navigation";
 
 const Course = () => {
+  const searchParams = useSearchParams();
+  const courseName = searchParams.get("course-name");
+
   return (
     <main>
       <div className="hero bg-[url('/svg/bg-graphic.svg')] bg-no-repeat  bg-right-top bg-contain md:bg-auto pb-20">
@@ -9,7 +14,7 @@ const Course = () => {
           <div>
             <div className=" md:flex justify-between ">
               <h1 className=" text-5xl font-viga text-primary w-[500px]">
-                Some course about finance here
+                {courseName}
               </h1>
               <div
                 className={`" bg-primary text-white rounded-full py-1 px-4 w-max h-max relative "`}
