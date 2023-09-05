@@ -9,6 +9,12 @@ const viga = Viga({
   variable: "--font-viga",
 });
 
+const roboto_condensed = Roboto_Condensed({
+  subsets: ["latin"],
+  weight: ["400", "300", "700"],
+  variable: "--roboto_condensed",
+});
+
 export const metadata = {
   title: "Academia Educa",
   description:
@@ -18,7 +24,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="pt">
-      <body className={`${viga.variable} text-dark`}>
+      <body
+        className={`${viga.variable} ${roboto_condensed.variable} font-roboto_condensed text-dark`}
+      >
         <NavBar />
         {children}
         <Footer />

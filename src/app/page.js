@@ -1,24 +1,85 @@
+"use client";
 import Image from "next/image";
 import ValueItems from "./components/value_items";
 import Categories from "./components/categories";
 import Courses from "./components/courses";
 import ContactUs from "./components/contact_us";
 
+import { gsap, Power3, ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
+
 export default function Home() {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    let heroHeadingText = document.getElementById("hero-heading-text");
+    let heroBodyText = document.getElementById("hero-body-text");
+    let heroButton1 = document.getElementById("hero-button-1");
+    let heroButton2 = document.getElementById("hero-button-2");
+
+    const tl = gsap.timeline({ delay: 0.5 });
+
+    tl.to(heroHeadingText, {
+      opacity: 1,
+      y: 0,
+      duration: 1,
+      ease: Power3.easeIn,
+    })
+      .to(heroBodyText, { opacity: 1, duration: 1, delay: 1 })
+      .to(heroButton1, { opacity: 1, duration: 1 })
+      .to(heroButton2, { opacity: 1, duration: 1 });
+  }, []);
+
+  useEffect(() => {
+    let whyHeading = document.getElementById("why-heading");
+    let whyItem = document.getElementById("why-item-1");
+    let whyItem2 = document.getElementById("why-item-2");
+    let whyItem3 = document.getElementById("why-item-3");
+
+    const tl = new gsap.timeline({
+      delay: 0.5,
+      scrollTrigger: { trigger: whyHeading, start: "top 60%" },
+    });
+    tl.to(whyHeading, { opacity: 1, duration: 0.5 })
+      .to(whyItem, { opacity: 1, duration: 0.5 })
+      .to(whyItem2, { opacity: 1, duration: 0.5 })
+      .to(whyItem3, { opacity: 1, duration: 0.5 });
+  }, []);
+
+  useEffect(() => {
+    let values = document.getElementById("values");
+    let valuesImage = document.getElementById("values-image");
+    let valuesContent = document.getElementById("values-content");
+
+    const tl = new gsap.timeline({
+      delay: 0.5,
+      scrollTrigger: { trigger: values, start: "top 60%" },
+    });
+    tl.to(valuesImage, { opacity: 1, x: 0, duration: 1 }).to(valuesContent, {
+      opacity: 1,
+      duration: 1,
+    });
+  }, []);
   return (
     <main>
       <div className="hero bg-[url('/svg/bg-graphic.svg')] bg-no-repeat  bg-right-top bg-contain md:bg-auto pb-20">
         <div className="content container m-auto pt-[200px] md:pt-[400px] lg:pt-[300px] space-y-8">
-          <h1 className=" text-5xl font-viga text-primary">
+          <h1
+            id="hero-heading-text"
+            className=" translate-y-20 opacity-0 text-5xl font-viga text-primary"
+          >
             Transforme o seu futuro!
           </h1>
-          <p className="">
+          <p id="hero-body-text" className="opacity-0">
             Chegou a hora de investir em si mesmo e preparar-se para o futuro;
             estamos aqui <br /> para apoiar o seu crescimento e ajudá-lo a
             atingir o seu potencial máximo.
           </p>
           <div className=" md:flex gap-10 ">
-            <button className=" mb-5 md:mb-0 flex gap-5 items-center px-5 py-4 rounded-lg justify-center bg-primary hover:bg-accent hover:text-black hover:shadow-xl ease-in-out duration-200">
+            <button
+              id="hero-button-1"
+              className=" opacity-0 mb-5 md:mb-0 flex gap-5 items-center px-5 py-4 rounded-lg justify-center bg-primary hover:bg-accent hover:text-black hover:shadow-xl ease-in-out duration-200"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="24"
@@ -34,7 +95,10 @@ export default function Home() {
               <p className=" font-viga text-white">Fale connosco</p>
             </button>
 
-            <button className="flex gap-5 items-center px-5 py-4 rounded-lg justify-center hover:shaddow">
+            <button
+              id="hero-button-2"
+              className=" opacity-0 flex gap-5 items-center px-5 py-4 rounded-lg justify-center hover:shaddow"
+            >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
                 width="20"
@@ -53,12 +117,15 @@ export default function Home() {
         </div>
       </div>
       <div className="container m-auto text-center">
-        <h1 className="font-viga text-4xl mb-14 ">
+        <h1 id="why-heading" className=" opacity-0 font-viga text-4xl mb-14 ">
           Porquê investir em uma formação profissional?
         </h1>
 
         <div className="grid md:grid-cols-2 gap-8 lg:grid-cols-3">
-          <div className=" flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5">
+          <div
+            id="why-item-1"
+            className=" opacity-0 flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="70"
@@ -133,7 +200,10 @@ export default function Home() {
               trabalho, mas também na sua vida pessoal
             </p>
           </div>
-          <div className=" flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5">
+          <div
+            id="why-item-2"
+            className=" opacity-0 flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="100"
@@ -171,7 +241,10 @@ export default function Home() {
               ou promovido.
             </p>
           </div>
-          <div className=" flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5">
+          <div
+            id="why-item-3"
+            className=" opacity-0 flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5"
+          >
             <svg
               xmlns="http://www.w3.org/2000/svg"
               width="99"
@@ -248,15 +321,16 @@ export default function Home() {
           </div>
         </div>
       </div>
-      <div className=" mt-28 container m-auto lg:flex gap-5">
+      <div id="values" className=" mt-28 container m-auto lg:flex gap-5">
         <Image
+          id="values-image"
           src={"/svg/values.svg"}
           width={587}
           height={335}
           alt="people sitting"
-          className=" m-auto lg:m-0"
+          className=" m-auto lg:m-0 -translate-x-96 opacity-0"
         />
-        <div>
+        <div id="values-content" className="opacity-0">
           <h1 className=" text-4xl font-viga mb-5">Nossos Valores</h1>
           <div className="grid gap-5 grid-cols-2">
             <ValueItems

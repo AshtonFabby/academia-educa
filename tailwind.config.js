@@ -23,6 +23,7 @@ module.exports = {
       },
       fontFamily: {
         viga: ["var(--font-viga)", "sans-serif"],
+        roboto_condensed: ["var(--font-roboto_condensed)", "sans-serif"],
       },
     },
   },

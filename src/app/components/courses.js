@@ -1,8 +1,25 @@
 import CourseItem from "./course_item";
 
+import { gsap, ScrollTrigger } from "gsap/all";
+import { useEffect } from "react";
+
 const Courses = () => {
+  gsap.registerPlugin(ScrollTrigger);
+
+  useEffect(() => {
+    let courses = document.getElementById("courses");
+    gsap.to(courses, {
+      opacity: 1,
+      duration: 1,
+      scrollTrigger: {
+        trigger: courses,
+        start: "top 60%",
+      },
+    });
+  });
+
   return (
-    <div className=" mt-28 container m-auto">
+    <div id="courses" className=" opacity-0 mt-28 container m-auto">
       <h1 className=" font-viga text-4xl text-center mb-12">
         Cursos em destaque
       </h1>
