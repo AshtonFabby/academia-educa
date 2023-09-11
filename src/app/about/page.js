@@ -136,21 +136,46 @@ const AboutPage = () => {
             Vamas além da capacitação técnica <br /> professional
           </h1>
           <div className=" grid md:grid-cols-3 gap-10 mt-20">
-            <p>
-              Programas de Saúde e Bem-Estar: Oferecer aulas de ioga, meditação
-              ou programas de saúde mental para promover o bem-estar dos alunos.
-            </p>
-            <p>
-              Treinamento em Soft Skills: Oferecer cursos sobre habilidades
-              interpessoais, como trabalho em equipe, empatia e resolução de
-              conflitos.
-            </p>
-            <p>
-              Atividades Culturais e Sociais: Promover atividades
-              extracurriculares, como eventos culturais, encontros sociais e
-              clubes de interesse, para construir uma comunidade entre os
-              alunos.
-            </p>
+            <div className=" space-y-5">
+              <Image
+                src={"/images/sports.jpg"}
+                alt="Sports"
+                width={400}
+                height={400}
+              />
+              <p>
+                Programas de Saúde e Bem-Estar: Oferecer aulas de ioga,
+                meditação ou programas de saúde mental para promover o bem-estar
+                dos alunos.
+              </p>
+            </div>
+            <div className=" space-y-5">
+              <Image
+                src={"/images/soft_skills2.jpg"}
+                alt="Sports"
+                width={400}
+                height={400}
+              />
+              <p>
+                Treinamento em Soft Skills: Oferecer cursos sobre habilidades
+                interpessoais, como trabalho em equipe, empatia e resolução de
+                conflitos.
+              </p>
+            </div>
+            <div className=" space-y-5">
+              <Image
+                src={"/images/culture.jpg"}
+                alt="Sports"
+                width={400}
+                height={400}
+              />
+              <p>
+                Atividades Culturais e Sociais: Promover atividades
+                extracurriculares, como eventos culturais, encontros sociais e
+                clubes de interesse, para construir uma comunidade entre os
+                alunos.
+              </p>
+            </div>
           </div>
         </div>
       </div>
@@ -167,7 +192,7 @@ const AboutPage = () => {
           />
         </div>
         <div className="">
-          <h3 className=" font-viga text-3xl">Acreditação</h3>
+          <h3 className=" font-viga text-3xl">Parceiros</h3>
           <div className="md:flex mt-5">
             <Image src="/images/lin.png" width={324} height={94} alt="inefop" />
             <Image src="/images/via.png" width={324} height={94} alt="inefop" />

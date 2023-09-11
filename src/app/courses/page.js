@@ -1,3 +1,4 @@
+import Link from "next/link";
 import Categories from "../components/categories";
 import ContactUs from "../components/contact_us";
 import CourseItem from "../components/course_item";
@@ -14,6 +15,7 @@ const Courses = () => {
         </div>
       </div>
       <Categories />
+
       <div className=" container mx-auto my-28">
         <h1 className=" text-4xl font-viga mb-5 text-center ">
           Cursos em destaque

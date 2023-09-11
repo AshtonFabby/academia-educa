@@ -12,7 +12,7 @@ const viga = Viga({
 const roboto_condensed = Roboto_Condensed({
   subsets: ["latin"],
   weight: ["400", "300", "700"],
-  variable: "--roboto_condensed",
+  variable: "--font-roboto_condensed",
 });
 
 export const metadata = {
