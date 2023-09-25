@@ -12,7 +12,11 @@ const ContactUs = () => {
             de cada indivíduo
           </p>
         </div>
-        <form className=" p-10 space-y-4 lg:p-20 bg-white shadow-xl rounded-2xl md:w-1/2">
+        <form
+          action="https://formsubmit.io/send/e74a3cd6-9aae-4379-b85e-622b73a68448"
+          method="POST"
+          className=" p-10 space-y-4 lg:p-20 bg-white shadow-xl rounded-2xl md:w-1/2"
+        >
           <h2 className="font-viga text-2xl">Inscreva-se</h2>
           <div>
             <label htmlFor="name" className="font-viga">
@@ -58,7 +62,11 @@ const ContactUs = () => {
               className=" border-b-2 border-primary w-full"
             />
           </div>
-          <button className=" py-4 mt-5 bg-primary font-viga rounded-xl text-white w-full ">
+          <input name="_formsubmit_id" type="text" className="invisible" />
+          <button
+            type="submit"
+            className=" py-4 mt-5 bg-primary font-viga rounded-xl text-white w-full "
+          >
             Enviar
           </button>
         </form>

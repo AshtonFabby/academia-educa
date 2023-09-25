@@ -39,7 +39,7 @@ const Categories = () => {
         <Link
           id="category-item"
           className="opacity-0"
-          href={`/courses/category?category-name=${"Negócios e Gestão"}`}
+          href={`/courses/category?category-name=${"Negócios e Gestão"}&category-id=${"0c8goowtbbgzdzx"}`}
         >
           <div
             className={` border-2 border-primary h-[316px] border-dashed hover:shadow-2xl cursor-pointer py-16 rounded-2xl flex flex-col gap-4 justify-center items-center`}
@@ -48,7 +48,7 @@ const Categories = () => {
               src="/svg/finance.svg"
               width={100}
               height={100}
-              alt="finace icon"
+              alt="finance icon"
             />
             <h3 className=" text-2xl font-semibold text-center">
               Negócios e <br />
@@ -59,7 +59,7 @@ const Categories = () => {
         <Link
           id="category-item"
           className="opacity-0"
-          href={`/courses/category?category-name=${"Secretariado"}`}
+          href={`/courses/category?category-name=${"Secretariado"}&category-id=${"tduq43pdq1fursw"}`}
         >
           <div
             className={` border-2 border-primary h-[316px] border-dashed hover:shadow-2xl cursor-pointer py-16 rounded-2xl flex flex-col gap-4 justify-center items-center`}
@@ -68,7 +68,7 @@ const Categories = () => {
               src="/svg/secrerary.svg"
               width={100}
               height={100}
-              alt="finace icon"
+              alt="finance icon"
             />
             <h3 className=" text-2xl font-semibold text-center">
               Secretariado
@@ -78,7 +78,7 @@ const Categories = () => {
         <Link
           id="category-item"
           className="opacity-0"
-          href={`/courses/category?category-name=${"Produtividade"}`}
+          href={`/courses/category?category-name=${"Produtividade"}&category-id=${"nk5mdf38fklm351"}`}
         >
           <div
             className={` border-2 border-primary h-[316px] border-dashed hover:shadow-2xl cursor-pointer py-16 rounded-2xl flex flex-col gap-4 justify-center items-center`}
@@ -87,7 +87,7 @@ const Categories = () => {
               src="/svg/productive.svg"
               width={100}
               height={100}
-              alt="finace icon"
+              alt="finance icon"
             />
             <h3 className=" text-2xl font-semibold text-center">
               Produtividade
@@ -97,7 +97,7 @@ const Categories = () => {
         <Link
           id="category-item"
           className="opacity-0"
-          href={`/courses/category?category-name=${"Negócios e Gestão"}`}
+          href={`/courses/category?category-name=${"Negócios e Gestão"}&category-id=${"0c8goowtbbgzdzx"}`}
         >
           <div
             className={` border-2 border-primary h-[316px] border-dashed hover:shadow-2xl cursor-pointer py-16 rounded-2xl flex flex-col gap-4 justify-center items-center`}
@@ -106,7 +106,7 @@ const Categories = () => {
               src="/svg/gesto.svg"
               width={100}
               height={100}
-              alt="finace icon"
+              alt="finance icon"
             />
             <h3 className=" text-2xl font-semibold text-center">
               Negócios e <br />
@@ -117,7 +117,7 @@ const Categories = () => {
         <Link
           id="category-item"
           className="opacity-0"
-          href={`/courses/category?category-name=${"Vendas e Marketing"}`}
+          href={`/courses/category?category-name=${"Vendas e Marketing"}&category-id=${"ubss00c1rdvtje3"}`}
         >
           <div
             className={` border-2 border-primary h-[316px] border-dashed hover:shadow-2xl cursor-pointer py-16 rounded-2xl flex flex-col gap-4 justify-center items-center`}
@@ -126,7 +126,7 @@ const Categories = () => {
               src="/svg/marketing.svg"
               width={100}
               height={100}
-              alt="finace icon"
+              alt="finance icon"
             />
             <h3 className=" text-2xl font-semibold text-center">
               Vendas e <br />
@@ -137,7 +137,7 @@ const Categories = () => {
         <Link
           id="category-item"
           className="opacity-0"
-          href={`/courses/category?category-name=${"Tecnologia Informação"}`}
+          href={`/courses/category?category-name=${"Tecnologia de Informação"}&category-id=${"bgn3rs0fnsnm3s8"}`}
         >
           <div
             className={` border-2 border-primary h-[316px] border-dashed hover:shadow-2xl cursor-pointer py-16 rounded-2xl flex flex-col gap-4 justify-center items-center`}
@@ -146,7 +146,7 @@ const Categories = () => {
               src="/svg/technology.svg"
               width={100}
               height={100}
-              alt="finace icon"
+              alt="finance icon"
             />
             <h3 className=" text-2xl font-semibold text-center">
               Tecnologia de <br />
@@ -157,7 +157,7 @@ const Categories = () => {
         <Link
           id="category-item"
           className="opacity-0"
-          href={`/courses/category?category-name=${"Sectores Emergentes"}`}
+          href={`/courses/category?category-name=${"Sectores Emergentes"}&category-id=${"fokdn912rbll64h"}`}
         >
           <div
             className={` border-2 border-primary h-[316px] border-dashed hover:shadow-2xl cursor-pointer py-16 rounded-2xl flex flex-col gap-4 justify-center items-center`}
@@ -166,7 +166,7 @@ const Categories = () => {
               src="/svg/industry.svg"
               width={100}
               height={100}
-              alt="finace icon"
+              alt="finance icon"
             />
             <h3 className=" text-2xl font-semibold text-center">
               Sectores <br />

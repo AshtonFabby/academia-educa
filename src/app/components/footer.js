@@ -1,10 +1,11 @@
 import Image from "next/image";
 import Link from "next/link";
+import { BsFacebook } from "react-icons/bs";
 
 const Footer = () => {
   return (
     <footer>
-      <div className="lg:flex justify-between items-center container mx-auto">
+      <div className=" mb-10 lg:flex justify-between items-center container mx-auto">
         <Link href="/">
           <Image width={100} height={100} alt="" src="/images/logo.png" />
         </Link>
@@ -40,6 +41,14 @@ const Footer = () => {
             Contactos 
           </Link>
         </div>
+      </div>
+      <div className=" bg-primary h-52  hidden">
+        <Link
+          href={"#"}
+          className="  text-white hover:text-accent ease-in w-10 h-10 rounded-xl "
+        >
+          <BsFacebook size={30} />
+        </Link>
       </div>
     </footer>
   );

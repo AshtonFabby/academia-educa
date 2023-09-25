@@ -4,10 +4,9 @@ import ValueItems from "./components/value_items";
 import Categories from "./components/categories";
 import Courses from "./components/courses";
 import ContactUs from "./components/contact_us";
-
+import { BsWhatsapp } from "react-icons/bs";
 import { gsap, Power3, ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
-import Link from "next/link";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -16,7 +15,6 @@ export default function Home() {
     let heroHeadingText = document.getElementById("hero-heading-text");
     let heroBodyText = document.getElementById("hero-body-text");
     let heroButton1 = document.getElementById("hero-button-1");
-    let heroButton2 = document.getElementById("hero-button-2");
 
     const tl = gsap.timeline({ delay: 0.5 });
 
@@ -27,8 +25,7 @@ export default function Home() {
       ease: Power3.easeIn,
     })
       .to(heroBodyText, { opacity: 1, duration: 1, delay: 1 })
-      .to(heroButton1, { opacity: 1, duration: 1 })
-      .to(heroButton2, { opacity: 1, duration: 1 });
+      .to(heroButton1, { opacity: 1, duration: 1 });
   }, []);
 
   useEffect(() => {
@@ -79,30 +76,11 @@ export default function Home() {
           <div className=" md:flex gap-10 ">
             <button
               id="hero-button-1"
-              className=" opacity-0 mb-5 md:mb-0 flex gap-5 items-center px-10 py-4 rounded-lg justify-center bg-primary hover:bg-accent hover:text-black hover:shadow-xl ease-in-out duration-200"
+              className=" text-white opacity-0 mb-5 md:mb-0 flex gap-5 items-center px-10 py-4 rounded-lg justify-center bg-primary hover:bg-accent hover:text-black hover:shadow-xl ease-in-out duration-200"
             >
-              <p className=" font-viga text-white">Registro</p>
+              <BsWhatsapp />
+              <p className=" font-viga">Fale connosco</p>
             </button>
-            <Link href={"https://api.whatsapp.com/send?phone=244928171556"}>
-              <button
-                id="hero-button-2"
-                className=" opacity-0 flex gap-5 items-center px-5 py-4 rounded-lg justify-center hover:shaddow"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="24"
-                  height="24"
-                  viewBox="0 0 24 24"
-                  fill="none"
-                >
-                  <path
-                    d="M7.25399 18.494L7.97799 18.917C9.19893 19.6291 10.5876 20.0029 12.001 20C13.5832 20 15.13 19.5308 16.4456 18.6518C17.7611 17.7727 18.7865 16.5233 19.392 15.0615C19.9975 13.5997 20.156 11.9911 19.8473 10.4393C19.5386 8.88743 18.7767 7.46197 17.6578 6.34315C16.539 5.22433 15.1136 4.4624 13.5617 4.15372C12.0099 3.84504 10.4013 4.00346 8.93952 4.60896C7.47771 5.21447 6.22828 6.23984 5.34923 7.55544C4.47018 8.87103 4.00099 10.4177 4.00099 12C3.99807 13.4139 4.37226 14.8029 5.08499 16.024L5.50699 16.748L4.85399 19.149L7.25399 18.494ZM2.00499 22L3.35699 17.032C2.46608 15.5049 1.99804 13.768 2.00099 12C2.00099 6.477 6.47799 2 12.001 2C17.524 2 22.001 6.477 22.001 12C22.001 17.523 17.524 22 12.001 22C10.2338 22.0029 8.49765 21.5352 6.97099 20.645L2.00499 22ZM8.39199 7.308C8.52599 7.298 8.66099 7.298 8.79499 7.304C8.84899 7.308 8.90299 7.314 8.95699 7.32C9.11599 7.338 9.29099 7.435 9.34999 7.569C9.64799 8.245 9.93799 8.926 10.218 9.609C10.28 9.761 10.243 9.956 10.125 10.146C10.065 10.243 9.97099 10.379 9.86199 10.518C9.74899 10.663 9.50599 10.929 9.50599 10.929C9.50599 10.929 9.40699 11.047 9.44499 11.194C9.45899 11.25 9.50499 11.331 9.54699 11.399L9.60599 11.494C9.86199 11.921 10.206 12.354 10.626 12.762C10.746 12.878 10.863 12.997 10.989 13.108C11.457 13.521 11.987 13.858 12.559 14.108L12.564 14.11C12.649 14.147 12.692 14.167 12.816 14.22C12.878 14.246 12.942 14.268 13.007 14.286C13.0742 14.3031 13.1449 14.2999 13.2102 14.2767C13.2756 14.2536 13.3326 14.2116 13.374 14.156C14.098 13.279 14.164 13.222 14.17 13.222V13.224C14.2203 13.1771 14.28 13.1415 14.3452 13.1196C14.4104 13.0977 14.4796 13.09 14.548 13.097C14.608 13.101 14.669 13.112 14.725 13.137C15.256 13.38 16.125 13.759 16.125 13.759L16.707 14.02C16.805 14.067 16.894 14.178 16.897 14.285C16.901 14.352 16.907 14.46 16.884 14.658C16.852 14.917 16.774 15.228 16.696 15.391C16.6425 15.5022 16.5716 15.6042 16.486 15.693C16.3851 15.7989 16.2746 15.8953 16.156 15.981C16.074 16.043 16.031 16.071 16.031 16.071C15.9066 16.1499 15.7788 16.2233 15.648 16.291C15.3905 16.4278 15.1062 16.5063 14.815 16.521C14.63 16.531 14.445 16.545 14.259 16.535C14.251 16.535 13.691 16.448 13.691 16.448C12.2692 16.074 10.9544 15.3735 9.85099 14.402C9.62499 14.203 9.41499 13.989 9.20099 13.776C8.31299 12.891 7.63999 11.936 7.23099 11.034C7.0227 10.5915 6.91024 10.11 6.90099 9.621C6.89723 9.01375 7.09605 8.42257 7.46599 7.941C7.53899 7.847 7.60799 7.749 7.72699 7.636C7.85299 7.516 7.93399 7.452 8.02099 7.408C8.13666 7.35003 8.26285 7.31602 8.39199 7.308Z"
-                    fill="#0B0B3A"
-                  />
-                </svg>
-                <p className=" font-viga">Fale connosco</p>
-              </button>
-            </Link>
           </div>
         </div>
       </div>
@@ -116,13 +94,7 @@ export default function Home() {
             id="why-item-1"
             className=" opacity-0 flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="70"
-              height="70"
-              viewBox="0 0 70 70"
-              fill="none"
-            >
+            <svg width="70" height="70" viewBox="0 0 70 70" fill="none">
               <g clipPath="url(#clip0_51_18)">
                 <mask
                   id="path-1-outside-1_51_18"
@@ -194,13 +166,7 @@ export default function Home() {
             id="why-item-2"
             className=" opacity-0 flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="100"
-              height="100"
-              viewBox="0 0 100 100"
-              fill="none"
-            >
+            <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
               <path
                 d="M16.6667 50H12.5V33.3333C12.5 28.731 16.231 25 20.8333 25H37.5M16.6667 50V75C16.6667 79.6025 20.3976 83.3333 25 83.3333H75C79.6025 83.3333 83.3333 79.6025 83.3333 75V50M16.6667 50H41.6667M37.5 25V20.8333C37.5 16.231 41.231 12.5 45.8333 12.5H54.1667C58.7692 12.5 62.5 16.231 62.5 20.8333V25M37.5 25H62.5M83.3333 50H87.5V33.3333C87.5 28.731 83.7692 25 79.1667 25H62.5M83.3333 50H58.3333M41.6667 50V41.6667H58.3333V50M41.6667 50V58.3333H58.3333V50"
                 stroke="url(#paint0_linear_36_42)"
@@ -235,13 +201,7 @@ export default function Home() {
             id="why-item-3"
             className=" opacity-0 flex border-dashed hover:shadow-2xl rounded-2xl border-primary border-2 flex-col px-10 py-16 justify-center items-center gap-5"
           >
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              width="99"
-              height="99"
-              viewBox="0 0 99 99"
-              fill="none"
-            >
+            <svg width="99" height="99" viewBox="0 0 99 99" fill="none">
               <path
                 d="M48.3677 70.5453C47.9593 69.6481 47.1137 68.9935 46.0903 68.8771C45.2236 68.7781 44.3751 68.5925 43.5682 68.3248C43.2065 68.2031 42.867 68.0703 42.5527 67.928L43.0749 66.5044C43.4437 66.669 43.8236 66.8196 44.2126 66.9557L44.2286 66.9615L44.2451 66.9669C45.4934 67.3794 46.7218 67.5885 47.8954 67.5885C49.0739 67.5885 49.9282 67.4305 50.5844 67.0918L50.6236 67.0716L50.662 67.0494C51.6561 66.4789 52.2266 65.4984 52.2266 64.3586C52.2266 63.0939 51.5443 62.0441 50.3543 61.4769C49.7557 61.1857 48.9056 60.9076 47.6809 60.6032C46.4248 60.2856 45.3696 59.9486 44.5512 59.6033C43.9531 59.3327 43.4342 58.9008 42.9664 58.2833C42.5638 57.7322 42.36 56.9035 42.36 55.819C42.36 54.5106 42.7284 53.4307 43.4866 52.5174C44.1614 51.7171 45.1196 51.1735 46.4058 50.8686C47.3599 50.6426 48.1041 49.9615 48.4386 49.0821C48.8169 49.9735 49.6217 50.6364 50.6232 50.796C51.4598 50.9293 52.2278 51.1417 52.9184 51.4292L52.4378 52.8243C51.1339 52.3008 49.8506 52.0364 48.6094 52.0364C44.4873 52.0364 44.2786 54.8802 44.2786 55.4503C44.2786 56.6861 44.946 57.7223 46.1096 58.2936L46.1422 58.3097L46.1752 58.3246C46.763 58.5869 47.5971 58.8398 48.8008 59.1203C50.0453 59.4016 51.0832 59.7238 51.8987 60.081L51.9156 60.0884L51.9325 60.0954C52.538 60.3475 53.0574 60.7682 53.5202 61.382L53.5276 61.3915L53.5351 61.4014C53.9397 61.9245 54.1451 62.7334 54.1451 63.8059C54.1451 65.0438 53.7867 66.0915 53.0491 67.0093C52.4093 67.8055 51.5163 68.3566 50.318 68.694C49.3927 68.9547 48.675 69.6621 48.3677 70.5453Z"
                 fill="black"
@@ -344,25 +304,79 @@ export default function Home() {
       </div>
       <Categories />
       <Courses />
-      <div className=" container mx-auto mt-28 lg:flex items-center gap-10">
+      <div className=" container mx-auto mt-28 lg:flex items-center justify-between gap-10">
         <Image
-          src={"/images/happy_guy.png"}
+          src={"/images/study.jpg"}
           height={498}
           width={485}
           alt="happy guy"
-          className="lg:w-4/12 mb-10 lg:mb-0"
+          className="lg:w-4/12 mb-10 lg:mb-0 object-fill h-[580px] w-[500px]"
         />
-        <div>
+        <div className=" mb-20">
           <h2 className=" text-4xl font-viga mb-5">
             Porquê fazer o curso connosco?
           </h2>
-          <ol className="grid md:grid-cols-2 gap-10 font-viga text-xl">
-            <li>Mentoria e Aconselhamento de Carreira</li>
-            <li>Programas de Estágio e Colocação Profissional</li>
-            <li>Sessões de Networking</li>
-            <li>Serviços de Apoio Psicológico</li>
-            <li>Workshops e Seminários de desenvolvimento pessoal</li>
-            <li>Apoio na Busca de Emprego</li>
+          <ol className="grid gap-5 font-viga text-xl">
+            <li className=" p-5 border rounded-lg hover:shadow-lg flex gap-5">
+              <Image
+                src={"/svg/icon.svg"}
+                alt="round icon"
+                width={25}
+                height={25}
+                className=" hover:animate-spin"
+              />
+              Mentoria e Aconselhamento de Carreira
+            </li>
+            <li className=" p-5 border rounded-lg hover:shadow-lg flex gap-5">
+              <Image
+                src={"/svg/icon.svg"}
+                alt="round icon"
+                width={25}
+                height={25}
+                className=" hover:animate-spin"
+              />
+              Programas de Estágio e Colocação Profissional
+            </li>
+            <li className=" p-5 border rounded-lg hover:shadow-lg flex gap-5">
+              <Image
+                src={"/svg/icon.svg"}
+                alt="round icon"
+                width={25}
+                height={25}
+                className=" hover:animate-spin"
+              />
+              Sessões de Networking
+            </li>
+            <li className=" p-5 border rounded-lg hover:shadow-lg flex gap-5">
+              <Image
+                src={"/svg/icon.svg"}
+                alt="round icon"
+                width={25}
+                height={25}
+                className=" hover:animate-spin"
+              />
+              Serviços de Apoio Psicológico
+            </li>
+            <li className=" p-5 border rounded-lg hover:shadow-lg flex gap-5">
+              <Image
+                src={"/svg/icon.svg"}
+                alt="round icon"
+                width={25}
+                height={25}
+                className=" hover:animate-spin"
+              />
+              Workshops e Seminários de desenvolvimento pessoal
+            </li>
+            <li className=" p-5 border rounded-lg hover:shadow-lg flex gap-5">
+              <Image
+                src={"/svg/icon.svg"}
+                alt="round icon"
+                width={25}
+                height={25}
+                className=" hover:animate-spin"
+              />
+              Apoio na Busca de Emprego
+            </li>
           </ol>
         </div>
       </div>
