@@ -7,7 +7,7 @@ module.exports = {
   images: {
     remotePatterns: [
       {
-        protocol: "http",
+        protocol: "https",
         hostname: process.env.NEXT_PUBLIC_POCKETBASE_ASSET_HOSTNAME,
       },
     ],

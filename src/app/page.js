@@ -7,6 +7,7 @@ import ContactUs from "./components/contact_us";
 import { BsWhatsapp } from "react-icons/bs";
 import { gsap, Power3, ScrollTrigger } from "gsap/all";
 import { useEffect } from "react";
+import Link from "next/link";
 
 export default function Home() {
   gsap.registerPlugin(ScrollTrigger);
@@ -21,11 +22,11 @@ export default function Home() {
     tl.to(heroHeadingText, {
       opacity: 1,
       y: 0,
-      duration: 1,
+      duration: 0.8,
       ease: Power3.easeIn,
     })
-      .to(heroBodyText, { opacity: 1, duration: 1, delay: 1 })
-      .to(heroButton1, { opacity: 1, duration: 1 });
+      .to(heroBodyText, { opacity: 1, duration: 0.8, delay: 0.8 })
+      .to(heroButton1, { opacity: 1, duration: 0.8 });
   }, []);
 
   useEffect(() => {
@@ -35,7 +36,6 @@ export default function Home() {
     let whyItem3 = document.getElementById("why-item-3");
 
     const tl = new gsap.timeline({
-      delay: 0.5,
       scrollTrigger: { trigger: whyHeading, start: "top 60%" },
     });
     tl.to(whyHeading, { opacity: 1, duration: 0.5 })
@@ -53,7 +53,7 @@ export default function Home() {
       delay: 0.5,
       scrollTrigger: { trigger: values, start: "top 60%" },
     });
-    tl.to(valuesImage, { opacity: 1, x: 0, duration: 1 }).to(valuesContent, {
+    tl.to(valuesImage, { opacity: 1, x: 0, duration: 0.8 }).to(valuesContent, {
       opacity: 1,
       duration: 1,
     });
@@ -74,13 +74,18 @@ export default function Home() {
             atingir o seu potencial máximo.
           </p>
           <div className=" md:flex gap-10 ">
-            <button
-              id="hero-button-1"
-              className=" text-white opacity-0 mb-5 md:mb-0 flex gap-5 items-center px-10 py-4 rounded-lg justify-center bg-primary hover:bg-accent hover:text-black hover:shadow-xl ease-in-out duration-200"
+            <Link
+              href="https://api.whatsapp.com/send?phone=244928171556"
+              target="_blank"
             >
-              <BsWhatsapp />
-              <p className=" font-viga">Fale connosco</p>
-            </button>
+              <button
+                id="hero-button-1"
+                className=" text-white opacity-0 mb-5 md:mb-0 flex gap-5 items-center px-10 py-4 rounded-lg justify-center bg-primary hover:bg-accent hover:text-black hover:shadow-xl ease-in-out duration-200"
+              >
+                <BsWhatsapp />
+                <p className=" font-viga">Fale connosco</p>
+              </button>
+            </Link>
           </div>
         </div>
       </div>
